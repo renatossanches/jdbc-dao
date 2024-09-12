@@ -1,7 +1,7 @@
 package modal.entities;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.sql.Date;
 import java.util.Objects;
 
 public class Seller implements Serializable{
@@ -11,7 +11,7 @@ public class Seller implements Serializable{
 	private Integer id;
 	private String name;
 	private String email;
-	private LocalDate birthDate;
+	private Date birthDate;
 	private Double baseSalary;
 	private Department department;
 
@@ -19,12 +19,12 @@ public class Seller implements Serializable{
 		
 	}
 
-	public Seller(Integer id, String name, String email, LocalDate birthDate, Double baseSalary,
+	public Seller(Integer id, String name, String email, Date date, Double baseSalary,
 			Department department) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
-		this.birthDate = birthDate;
+		this.birthDate = date;
 		this.baseSalary = baseSalary;
 		this.department = department;
 	}
@@ -53,12 +53,12 @@ public class Seller implements Serializable{
 		this.email = email;
 	}
 
-	public LocalDate getBirthDate() {
+	public Date getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(LocalDate birthDate) {
-		this.birthDate = birthDate;
+	public void setBirthDate(Date date) {
+		this.birthDate = date;
 	}
 
 	public Double getBaseSalary() {
